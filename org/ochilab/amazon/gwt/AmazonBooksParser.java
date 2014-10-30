@@ -9,6 +9,7 @@ import com.google.gwt.xml.client.NodeList;
 import com.google.gwt.xml.client.XMLParser;
 import com.google.gwt.xml.client.impl.DOMParseException;
 
+import org.ochilab.amazon.entity;
 
 /**
 GWTクライアントでの動作を前提にしたAmazonの書籍データパーサーの雛形です。
