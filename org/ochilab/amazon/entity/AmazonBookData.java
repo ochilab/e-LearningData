@@ -1,5 +1,4 @@
 package org.ochilab.amazon.entity;
-
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
@@ -7,21 +6,24 @@ public class AmazonBookData implements Serializable {
 	private String title;
 	private String author;
 	private String publisher;
-	private String imgUrl;
 	private String isbn;
+	private String imgUrl;
 	private boolean registFlag;
+	private String publicationDate;
+	private String FormattedPrice;
 
 	public AmazonBookData() {
 	}
 
 	public AmazonBookData(String title, String author, String publisher,
-			String imgUrl, String isbn, boolean registFlag) {
+			String imgUrl, String isbn, boolean registFlag,String FormattedPrice) {
 		this.title = title;
 		this.author = author;
 		this.publisher = publisher;
 		this.imgUrl = imgUrl;
 		this.isbn = isbn;
 		this.registFlag = registFlag;
+		this.setFormattedPrice(FormattedPrice);
 	}
 
 	public String getAuthor() {
@@ -72,4 +74,19 @@ public class AmazonBookData implements Serializable {
 		return registFlag;
 	}
 
+	public String getPublicationDate() {
+		return publicationDate;
+	}
+
+	public void setPublicationDate(String publicationDate) {
+		this.publicationDate = publicationDate;
+	}
+
+	public String getFormattedPrice() {
+		return FormattedPrice;
+	}
+
+	public void setFormattedPrice(String formattedPrice) {
+		FormattedPrice = formattedPrice;
+	}
 }
